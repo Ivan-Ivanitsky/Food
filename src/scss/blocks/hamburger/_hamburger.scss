@@ -1,0 +1,86 @@
+.nav-menu{
+    visibility: hidden;
+    &__wrapper{
+        position: fixed;
+        width: 100%;
+        padding-top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 1000;
+        background: #fff;
+        transition: 0.3s;
+    }
+    .links{
+        list-style-type: none;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: 40px;
+        a{
+            color: #000;
+        }
+    }
+}
+
+.hamburger{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    span{
+        display: block;
+        width: 20px;
+        margin-bottom: 5px;
+        height: 2px;
+        background: black;
+        transition: 0.9s;
+    }
+}
+
+.active{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    transition: 0.9s;
+        span:nth-child(1){
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin-bottom: 5px;
+            background: black;
+            transform: rotate(45deg) translateY(5px) translateX(5px);
+        }
+        span:nth-child(2){
+            visibility: hidden;
+            width: 0px;
+        }
+        span:nth-child(3){
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: black;
+            transform: rotate(-45deg)translateY(-5px) translateX(5px);
+        }
+}
+
+
+.menuActive{
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+.hideOverflow{
+    overflow: hidden;
+}
